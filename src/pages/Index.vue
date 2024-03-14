@@ -33,8 +33,13 @@
 
 <script>
 export default {
+   htmlAttrs: {
+      lang: 'bg',
+    },
   metaInfo: {
-    title: 'Hello, world!'
+    meta: [ { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    title: 'Hello, world!',
   }
 }
 </script>

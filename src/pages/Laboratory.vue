@@ -9,6 +9,7 @@
       <iframe
           v-for="videoUrl in videos"
           width="560"
+          loading="lazy"
           height="315"
           :src="'https://www.youtube.com/embed/' + videoUrl"
           title="YouTube video player"
@@ -51,10 +52,13 @@ export default {
 .videos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .videos iframe {
   display: block;
   margin: 15px 10px;
+  aspect-ratio: 16/9;
+  width: 80%;
+  height: 400px;
 }
 </style>

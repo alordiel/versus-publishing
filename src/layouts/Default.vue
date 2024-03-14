@@ -2,7 +2,9 @@
 <template>
   <div class="layout">
     <siteHeader></siteHeader>
-    <slot/>
+    <div class="container">
+      <slot/>
+    </div>
     <siteFooter></siteFooter>
   </div>
 </template>
@@ -26,6 +28,9 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+.container {
+  min-height: calc(100vh - 250px);
 }
 img{
   max-width: 100%;
