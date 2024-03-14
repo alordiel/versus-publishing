@@ -1,39 +1,17 @@
 
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">За нас</g-link>
-        <g-link class="nav__link" to="/news/">Новини</g-link>
-        <g-link class="nav__link" to="/books/">Книги</g-link>
-        <g-link class="nav__link" to="/zevgma/">Поредица „Зевгма“</g-link>
-        <g-link class="nav__link" to="/laboratory/">Лаборатория</g-link>
-      </nav>
-    </header>
+    <siteHeader></siteHeader>
     <slot/>
     <siteFooter></siteFooter>
   </div>
 </template>
 
-<script>
+<script setup>
 import siteFooter from '../components/site-footer';
-export default {
-  name: "HomePage",
-  components: {
-    siteFooter,
-  },
-}
+import siteHeader from "../components/site-header.vue";
 </script>
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
+
 
 <style>
 body {
@@ -49,19 +27,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
+img{
+  max-width: 100%;
 }
 </style>
-<script setup>
-import SiteFooter from "../components/site-footer.vue";
-</script>
