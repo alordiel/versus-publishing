@@ -1,3 +1,4 @@
+
 <template>
   <div class="layout">
     <header class="header">
@@ -13,9 +14,19 @@
       </nav>
     </header>
     <slot/>
+    <siteFooter></siteFooter>
   </div>
 </template>
 
+<script>
+import siteFooter from '../components/site-footer';
+export default {
+  name: "HomePage",
+  components: {
+    siteFooter,
+  },
+}
+</script>
 <static-query>
 query {
   metadata {
@@ -51,3 +62,6 @@ body {
   margin-left: 20px;
 }
 </style>
+<script setup>
+import SiteFooter from "../components/site-footer.vue";
+</script>
