@@ -14,6 +14,13 @@ module.exports = {
           return `/books/${node.slug}`
         }
       }
-    ]
+    ],
+    Zevgma: [
+      {
+        path: (node) => {
+          return `/zevgma/${node.slug}`
+        }
+      }
+    ],
   }
 }

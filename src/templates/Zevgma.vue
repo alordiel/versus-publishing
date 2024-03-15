@@ -21,8 +21,8 @@ export default {
   },
   methods: {
     async fetchBookData() {
-      const books = require('../assets/data/books.json')
-
+      const books = require('../assets/data/zevgma.json')
+      console.log('slug: ' + this.$route.params.slug)
       // Fetch the book data using the slug passed in the route parameters
       const slug = this.$route.params.slug;
       // Assuming $staticData.books contains the books data

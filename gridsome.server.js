@@ -7,7 +7,7 @@
 
 module.exports = function (api) {
   api.loadSource( ( actions ) => {
-    const books = require('./src/assets/books.json')
+    const books = require('./src/assets/data/books.json')
     const collection = actions.addCollection({typeName:'Books'})
     for (const book of books) {
       collection.addNode({
@@ -26,6 +26,30 @@ module.exports = function (api) {
      createPage({
       path: '/books/:slug',
       component: './src/templates/Book.vue',
+    })
+  })
+
+
+  api.loadSource( ( actions ) => {
+    const books = require('./src/assets/data/zevgma.json')
+    const collection = actions.addCollection({typeName:'Zevgma'})
+    for (const book of books) {
+      collection.addNode({
+        id: book.slug,
+        slug: book.slug,
+        title: book.title,
+        content: book.content,
+        //author: book.author,
+        //coverImage: book.coverImage // You may need to adjust this depending on where your images are stored
+      })
+    }
+  })
+
+  api.createPages(({ createPage }) => {
+    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+     createPage({
+      path: '/zevgma/:slug',
+      component: './src/templates/Zevgma.vue',
     })
   })
 }
