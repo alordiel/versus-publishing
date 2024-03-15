@@ -6,5 +6,14 @@
 
 module.exports = {
   siteName: 'Издателство "Версус"',
-  plugins: []
+  plugins: [],
+  templates: {
+    Books: [
+      {
+        path: (node) => {
+          return `/books/${node.slug}`
+        }
+      }
+    ]
+  }
 }
