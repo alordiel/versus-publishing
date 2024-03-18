@@ -5,6 +5,7 @@
     <div class="book-list">
       <div v-for="book in $page.books.edges" :key="book.node.id" class="book-item" >
         <g-link :to="'/books/'+book.node.id" class="book-title">
+          <g-image :alt="book.node.title" :src="'~/assets/books/' + book.node.cover" width="135" />
           <span>{{ book.node.title }}</span>
         </g-link>
       </div>
@@ -17,7 +18,7 @@ query {
   books: allBooks {
     edges {
       node {
-        content
+        cover
         title
         id
         slug

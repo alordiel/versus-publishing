@@ -16,6 +16,12 @@ module.exports = function (api) {
         slug: book.slug,
         title: book.title,
         content: book.content,
+        cover: book.cover,
+        coverArtist: book.coverArtist,
+        ISBN: book.ISBN,
+        publishingInfo: book.publishingInfo,
+        coverType: book.coverType,
+        price: book.price
       })
     }
 
@@ -27,6 +33,12 @@ module.exports = function (api) {
         slug: book.slug,
         title: book.title,
         content: book.content,
+        cover: book.cover,
+        coverArtist: book.coverArtist,
+        ISBN: book.ISBN,
+        publishingInfo: book.publishingInfo,
+        coverType: book.coverType,
+        price: book.price
       })
     }
   });
