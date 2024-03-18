@@ -7,7 +7,6 @@
         <g-link :to="'/books/'+book.node.id" class="book-title">
           <span>{{ book.node.title }}</span>
         </g-link>
-        <div class="book-date">{{ book.node.content }}</div>
       </div>
     </div>
   </Layout>
