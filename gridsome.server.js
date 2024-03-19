@@ -6,6 +6,11 @@
 
 module.exports = function (api) {
 
+  api.loadSource(async (store) => {
+    store.addMetadata("baseURL", "https://versus-publishing.com");
+  });
+
+
   // creating the sources
   api.loadSource( ( actions ) => {
     const allBooks = require('./src/assets/data/books.json')
