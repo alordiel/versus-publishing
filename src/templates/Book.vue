@@ -2,7 +2,7 @@
   <Layout>
     <div>
       <h1>{{ book.title }}</h1>
-      <g-image :alt="book.title"  :src="`/assets/static/src/assets/books/${book.cover}`" width="320"/>
+      <g-image :alt="book.title"  src="~/assets/banners/Premiera.jpg" width="320"/>
       <div v-html="book.content"></div>
       <!-- Display other book details as needed -->
     </div>
