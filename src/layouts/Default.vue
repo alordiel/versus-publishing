@@ -11,7 +11,7 @@
 
 <script setup>
 import siteFooter from '../components/site-footer';
-import siteHeader from "../components/site-header.vue";
+import siteHeader from "../components/site-header";
 </script>
 
 
@@ -34,5 +34,17 @@ body {
 }
 img{
   max-width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 80px;
+}
+
+.nav__link {
+  margin-left: 20px;
 }
 </style>

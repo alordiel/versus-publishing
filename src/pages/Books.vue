@@ -5,7 +5,7 @@
     <div class="book-list">
       <div v-for="book in books" :key="book.slug" class="book-item" >
         <g-link :to="'/books/'+book.slug" class="book-title">
-          <g-image :alt="book.title" src="~/assets/banners/Premiera.jpg" width="135" />
+          <g-image :alt="book.title" src="~/assets/images/banners/Premiera.jpg" width="135" />
           <span>{{ book.title }}</span>
         </g-link>
       </div>

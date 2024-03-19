@@ -6,9 +6,11 @@ export default {
 
 <template>
 <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
+
+      <g-link to="/" class="logo">
+        <g-image alt="Издателство Версус" src="~/assets/images/brand/logo.png" width="60" />
+      </g-link>
+
       <nav class="nav">
         <g-link class="nav__link" to="/">За нас</g-link>
         <g-link class="nav__link" to="/news/">Новини</g-link>
@@ -18,25 +20,3 @@ export default {
       </nav>
     </header>
 </template>
-
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
-<style scoped>
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
